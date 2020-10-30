@@ -1,0 +1,359 @@
+/*General styling*/
+.container{
+  max-width: 1700px;
+}
+/*end/*
+
+/*HEADER STYLING*/
+header {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border-bottom: 4px solid #e27a20;
+  background: #f9f9f9;
+  padding: 10px;
+}
+.logo {
+  margin-bottom: 15px;
+}
+/*END*/
+
+/*SPIDER STYLING*/
+@media(max-width:768px){
+  .spider {
+    display: none !important;
+  }
+}
+.spiderweb {
+  background: #000;
+  width: 2px;
+  height: 200px;
+  margin-left: 49px;
+}
+
+.spider {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 30%;
+  animation: swing 2s infinite;
+  transform-origin: top;
+  z-index: 1;
+}
+
+.spider .body {
+  width: 100px;
+  height: 80px;
+  background:#bc50ff;
+  position: relative;
+  border-radius: 50%;
+
+}
+
+.spider .body .eye {
+  width: 33px;
+  height: 33px;
+  background: #fff;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 50%;
+}
+
+.spider .eye.right {
+  right: 15px;
+}
+.spider .eye.left {
+  left: 15px;
+}
+
+.spider .eye::after {
+  background: #000;
+  width: 7px;
+  height: 7px;
+  content: '';
+  display: block;
+  margin: 55%;
+  border-radius: 50%;
+  animation: look 8s infinite;
+}
+
+.spider .legs {
+  position: absolute;
+  bottom: -10%;
+  z-index: -1;
+}
+
+.spider .legs .leg {
+  width: 80px;
+  height: 40px;
+  margin-top: -20px;
+  border: 5px solid transparent;
+  border-top-color: #ff8201;
+  border-radius: 40px 40px 0 0;
+}
+
+.spider .legs.left {
+  left: -70%;
+}
+.spider .legs.right {
+  right: -60%;
+}
+
+.legs.left .leg:nth-child(1){
+  transform: rotate(10deg);
+  margin-left: 10px;
+}
+.legs.right .leg:nth-child(1){
+  transform: rotate(-10deg);
+  margin-left: -10px;
+}
+
+.legs.left .leg:nth-child(2){
+  transform: rotate(-20deg);
+  margin-left: 20px;
+}
+
+.legs.right .leg:nth-child(2){
+  transform: rotate(20deg);
+  margin-left: -20px;
+}
+
+.legs.left .leg:nth-child(3){
+  transform: rotate(-50deg);
+  margin-left: 30px;
+}
+
+.legs.right .leg:nth-child(3){
+  transform: rotate(50deg);
+  margin-left: -30px;
+}
+
+@keyframes  look{
+  0%, 40%, 100% {
+    transform: translateX(0);
+  }
+  45%, 95% {
+    transform: translateX(-110%);
+  }
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+/*END*/
+
+/* Carousel*/
+@media(max-width:768px){
+/*.homepage-slider .container {
+    padding-left: 0;
+    padding-right: 0;
+  }*/
+  .carousel-item.active {
+      height: 300px !important;
+  }
+  .carousel-caption {
+    display: block !important;
+    bottom: 15% !important;
+  }
+  .carousel-caption h1 {
+    font-size: 25px !important;
+  }
+  .carousel-caption p {
+    font-size: 14px !important;
+    margin-top: -5px;
+    margin-bottom: 38px !important;
+}
+}
+
+.carousel-item.active {
+    background: #000 url(images/hero-slider-image.jpg);
+    background-position: center center;
+    height: 580px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+.image-overlay {
+    width: 100%;
+    height: 100%;
+    background: #673AB7;
+    opacity: 0.6;
+    position: absolute;
+}
+.carousel-caption {
+    bottom: 30%;
+}
+.carousel-caption h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    animation: animate 1.5s linear infinite
+}
+@keyframes animate{
+   0%{
+     opacity: 0;
+   }
+   50%{
+     opacity: 0.7;
+   }
+   100%{
+     opacity: 0;
+   }
+ }
+.carousel-caption p {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 35px;
+}
+.carousel-inner .btn-primary {
+    color: #000;
+    background-color: #e27a20;
+    border-color: #e27a20;
+    border-radius: 25px !important;
+    padding: 8px 70px 8px 70px !important;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 16px !important;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*END*/
+
+/*ADVERT SECTION STYLING*/
+@media(max-width:767px){
+  .advert-link {
+      padding: 10px !important;
+      font-size: 13px !important;
+  }
+  h1.shop-title {
+    margin-top: -5rem;
+    font-size: 28px;
+  }
+}
+@media(max-width:767px) {
+  h1.shop-title {
+    margin-top: 0rem;
+  }
+  .col-sm-4 {
+    margin-bottom: 35px;
+  }
+  .web-primary {
+    width: 20%;
+  }
+  .right-web {
+    display: none;
+  }
+}
+@media(max-device-width:1024px){
+  .right-web {
+    display: none;
+  }
+}
+section.advert-section {
+    background: #191919;
+    padding-bottom: 100px;
+}
+.right-web {
+    float: right;
+    transform: scaleX(-1);
+    width: 100px;
+}
+.shop-title {
+    text-align: center;
+    margin-top: -6rem;
+    text-transform: uppercase;
+    font-family: azo-sans-web, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 25px;
+    color: #fff;
+    text-shadow: 2px 2px 5px #4612a5;
+}
+.col-sm-4 {
+  margin-top: 35px;
+}
+.adverts {
+  width: 100%;
+  background-color: #e27a20;
+  padding: 12px;
+  box-shadow: 4px 4px 10px #4912f3;
+  webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.adverts:hover {
+    transform: translateY(-8px);
+}
+.left-slide {
+  animation: slideIn 2s forwards;
+
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.right-slide {
+  animation: slideIn 2s forwards;
+
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.advert-link {
+    z-index: 1;
+    background: #8fe800;
+    padding: 10px 50px 10px 50px;
+    margin-top: -20px;
+    box-shadow: 2px 2px 4px 0px #6800ff;
+    color: #3814a8;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transform: skew(-21deg);
+    transition: all .2s ease-in-out;
+}
+.advert-link:hover {
+    transform: scale(1.1);
+}
+img.orange-arrow {
+    z-index: 1;
+    margin-left: -25px;
+    margin-top: -18px;
+}
+/*END*/
+
+#pumpkin:before {
+   content: "Happy Halloween!";
+}
