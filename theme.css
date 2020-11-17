@@ -1,13 +1,18 @@
 /*General styling*/
-.container{
+@media (min-width:768px) {
+  .container {
+    padding-right:0;
+    padding-left:0;
+  }
+  }.container{
   max-width: 1700px;
 }
 /*end/*
 
 /*HEADER STYLING*/
 header {
-  margin-bottom: 25px;
-  margin-top: 25px;
+  /*margin-bottom: 25px;
+  margin-top: 25px;*/
   border-bottom: 4px solid #e27a20;
   background: #f9f9f9;
   padding: 10px;
@@ -16,6 +21,31 @@ header {
   margin-bottom: 15px;
 }
 /*END*/
+
+/*NAVIGATION STYLING*/
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff7600;
+  display: flex;
+  justify-content: space-evenly;
+}
+.navigation li {
+  float: left;
+}
+.navigation li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navigation li a:hover {
+  background-color: #111;
+}
+/*NAVIGATION STYLING END*/
 
 /*SPIDER STYLING*/
 @media(max-width:768px){
